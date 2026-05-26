@@ -1,0 +1,107 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : topoSet
+Date   : Oct 20 2025
+Time   : 08:30:51
+Host   : RISEPC-MhOrpSuy
+PID    : 10575
+I/O    : uncollated
+Case   : /home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created faceSet inlet
+    Applying source patchToFace
+    Adding all faces of patches: (little_head_6parts_m) ...
+    Found matching patch little_head_6parts_m with 22188 faces
+    faceSet inlet now size 22188
+Read set faceSet inlet size:22188
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((1 -1.6 0.001) (1.6 -1 1.625))
+    faceSet inlet now size 640
+Created faceSet wall_bottom
+    Applying source patchToFace
+    Adding all faces of patches: (little_head_6parts_m) ...
+    Found matching patch little_head_6parts_m with 22188 faces
+    faceSet wall_bottom now size 22188
+Read set faceSet wall_bottom size:22188
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((0 -1.5 -0.001) (1.5 1.5 0.001))
+    faceSet wall_bottom now size 1800
+Created faceSet vent_1
+    Applying source patchToFace
+    Adding all faces of patches: (little_head_6parts_m) ...
+    Found matching patch little_head_6parts_m with 22188 faces
+    faceSet vent_1 now size 22188
+Read set faceSet vent_1 size:22188
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((-0.025 1.0245 0.7) (0.025 1.0255 0.725))
+    faceSet vent_1 now size 4
+Created faceSet wall_pack
+    Applying source patchToFace
+    Adding all faces of patches: (little_head_6parts_m) ...
+    Found matching patch little_head_6parts_m with 22188 faces
+    faceSet wall_pack now size 22188
+Read set faceSet wall_pack size:22188
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((0 0.9 0.29) (1.4 1.41 1.4))
+    faceSet wall_pack now size 9174
+Read set faceSet wall_pack size:9174
+    Applying source faceToFace
+    Removing all elements of face sets: (vent_1)
+    faceSet wall_pack now size 9170
+Created faceSet wall_top
+    Applying source patchToFace
+    Adding all faces of patches: (little_head_6parts_m) ...
+    Found matching patch little_head_6parts_m with 22188 faces
+    faceSet wall_top now size 22188
+Read set faceSet wall_top size:22188
+    Applying source boxToFace
+    Adding faces with centre within boxes 1((0 -1.5 3.5) (1.5 1.5 4.6))
+    faceSet wall_top now size 1680
+Created faceSet wall_side
+    Applying source patchToFace
+    Adding all faces of patches: (little_head_6parts_m) ...
+    Found matching patch little_head_6parts_m with 22188 faces
+    faceSet wall_side now size 22188
+Read set faceSet wall_side size:22188
+    Applying source faceToFace
+    Removing all elements of face sets: (inlet)
+    faceSet wall_side now size 21548
+Read set faceSet wall_side size:21548
+    Applying source faceToFace
+    Removing all elements of face sets: (wall_bottom)
+    faceSet wall_side now size 19748
+Read set faceSet wall_side size:19748
+    Applying source faceToFace
+    Removing all elements of face sets: (wall_top)
+    faceSet wall_side now size 18068
+Read set faceSet wall_side size:18068
+    Applying source faceToFace
+    Removing all elements of face sets: (wall_pack)
+    faceSet wall_side now size 8898
+Read set faceSet wall_side size:8898
+    Applying source faceToFace
+    Removing all elements of face sets: (vent_1)
+    faceSet wall_side now size 8894
+
+End
+

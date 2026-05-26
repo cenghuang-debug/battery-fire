@@ -1,0 +1,86 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Oct 20 2025
+Time   : 08:30:17
+Host   : RISEPC-MhOrpSuy
+PID    : 10437
+I/O    : uncollated
+Case   : /home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : little_head_6parts_m.stl
+Output       : little_head_6parts_m
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 28908 in 1 region(s)
+Vertices     : 14480
+Bounding Box : (-1.5 -1.5 0) (1.5 1.5 4.55)
+
+Constructing feature set from included angle 170
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 116
+    edges  : 192
+    of which
+        region edges   : 0
+        external edges : 44
+        internal edges : 148
+
+Final Feature set:
+    points : 132
+    of which
+        convex             : 16
+        concave            : 96
+        mixed              : 4
+        non-feature        : 16
+    edges  : 192
+    of which
+        external edges     : 44
+        internal edges     : 148
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m"
+Writing 16 convex feature points to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_convexFeaturePts.obj"
+Writing 96 concave feature points to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_concaveFeaturePts.obj"
+Writing 4 mixed feature points to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_mixedFeaturePts.obj"
+Writing 4 mixed feature point structure to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_mixedFeaturePtsStructure.obj"
+Writing 44 external edges to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_externalEdges.obj"
+Writing 148 internal edges to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_internalEdges.obj"
+Writing 0 flat edges to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_flatEdges.obj"
+Writing 0 open edges to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_openEdges.obj"
+Writing 0 multiple edges to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_multipleEdges.obj"
+Writing 0 region edges to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_regionEdges.obj"
+Writing 192 edge directions to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/extendedFeatureEdgeMesh/little_head_6parts_m_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32/constant/triSurface/little_head_6parts_m.eMesh"
+ExecutionTime = 0.09 s  ClockTime = 0 s
+
+End
+

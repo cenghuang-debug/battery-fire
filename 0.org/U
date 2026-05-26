@@ -1,0 +1,68 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    top
+    {
+        type               flowRateInletVelocity;
+        volumetricFlowRate -2.5;  //outlet
+    }
+    left
+    {
+        type            symmetryPlane;
+    }
+    inlet
+    {
+        type            pressureInletOutletVelocity;
+        value           $internalField;
+    }
+    wall_bottom
+    {
+        type            noSlip;
+    }
+    vent_1
+    {
+        type            flowRateInletVelocity; //fixedValue;
+        massFlowRate    tableFile;
+        massFlowRateCoeffs
+        {
+            file "$FOAM_CASE/0/mfr_LionFireII_GT_model_half.dat";    //name of data file
+            interpolationScheme linear; //
+        }
+        rhoInlet  3.31e-1;   // estimate for initial rho
+        extrapolateProfile  yes;  //To set the profile according to the downstream cells
+    }
+    wall_pack
+    {
+        type            noSlip;
+    }
+    wall_top
+    {
+        type            noSlip;
+    }
+    wall_side
+    {
+        type            noSlip;
+    }
+}
+
+
+// ************************************************************************* //

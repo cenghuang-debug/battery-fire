@@ -1,0 +1,38 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       IOobject;
+    location    "constant";
+    object      reactions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+species
+(
+    O2
+    H2O
+    batteryGasNMC
+    CO2
+    N2
+);
+reactions
+{
+    batteryGasReaction
+    {
+        type     irreversibleArrheniusReaction;
+        reaction "batteryGasNMC + 0.601O2 + 2.261N2 = 0.774CO2 + 0.608H2O + 2.261N2"; //NMC Golubkov et al. 2014
+        A        5.2e16;
+        beta     0;
+        Ta       14906;
+    }
+}
+
+// ************************************************************************* //

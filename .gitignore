@@ -1,0 +1,28 @@
+# OpenFOAM simulation result timesteps (root-level only)
+/[0-9]*/
+!/0.org/
+
+# Generated mesh (rebuild with Allrun -> snappyHexMesh)
+constant/polyMesh/
+constant/extendedFeatureEdgeMesh/
+
+# Large solver log
+log.reactingFoam
+log.decomposePar
+log.reconstructPar
+
+# HPC scheduler output
+slurm-*.out
+
+# ParaFoam artefacts
+*.OpenFOAM
+
+# Large postProcessing outputs (raw field data)
+postProcessing/hrr/
+postProcessing/myResiduals/
+
+# Visualisation renders
+images/
+
+# Parallel decomposition directories
+processor*/

@@ -1,0 +1,85 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : renumberMesh -overwrite
+Date   : Oct 20 2025
+Time   : 08:30:54
+Host   : RISEPC-MhOrpSuy
+PID    : 10590
+I/O    : uncollated
+Case   : /home/chenhu/OpenFOAM/chenhu-v2406/run/COFFEE/local/test_runs/battery_fire_coarse_32
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Mesh region0 size: 261546
+Before renumbering
+    band           : 259277
+    profile        : 9.84903e+09
+
+Using renumber-method: CuthillMcKee [default]
+
+Reading fields
+--> FOAM Warning : 
+    From bool Foam::IOobject::readHeader(Foam::dictionary&, Foam::Istream&)
+    in file db/IOobject/IOobjectReadHeader.C at line 118
+    Reading "0/mfr_LionFireII_GT_model_half.dat" at line 1
+    First token could not be read or is not 'FoamFile'
+
+Check header is of the form:
+
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       IOobject;
+    location    "0";
+    object      mfr_LionFireII_GT_model_half.dat;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+    volScalarField: N2 O2 T Ydefault alphat batteryGasNMC epsilon k nut p
+    volVectorField: U
+
+After renumbering
+    band           : 9821
+    profile        : 1.78981e+09
+
+Writing mesh to "constant"
+Reading hexRef8 data : cellLevel
+Reading hexRef8 data : pointLevel
+Reading hexRef8 data : level0Edge
+
+Timings:
+    read mesh   : 0.570232
+    read fields : 0.0693332
+    decompose   : 0
+    cell-cells  : 0
+    renumber    : 0.0657159
+    write       : 0.415119
+TotalTime = 1.25191 s
+
+ExecutionTime = 1.25 s  ClockTime = 1 s
+
+End
+
