@@ -35,9 +35,6 @@ This is the final validated case (case 32) corresponding to the published result
 │   ├── controlDict               # Run control (endTime = 1200 s)
 │   ├── fvSchemes / fvSolution    # Discretisation and linear solvers
 │   └── ...
-├── postProcessing/
-│   ├── processed_data/           # Extracted CSV data used for paper figures
-│   └── singleGraph_y/            # Raw line-probe outputs (per timestep)
 ├── Allrun                        # Full mesh + initialisation script
 ├── Allclean                      # Cleanup script
 └── sbatch_OF_dardel_test         # HPC job script (Dardel / SLURM)
@@ -74,15 +71,11 @@ On a SLURM cluster, adapt and submit `sbatch_OF_dardel_test`.
 | Turbulence model | k-ε (RAS) |
 | Combustion | Eddy Dissipation Concept (EDC) |
 
-## Post-processing data
-
-`postProcessing/processed_data/` contains CSV files with vertical temperature and species profiles at each write time (e.g. `singleGraph_y_360.csv`), plus `singleGraph_y_max_T_degree_data.csv` with the peak temperature time series. These files were used to generate the validation figures in the paper.
-
 ## License
 
 The case files are released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) licence. Please cite the paper above if you use this case.
 
 ## Contact
 
-Chen Huang — RISE Research Institutes of Sweden / Lund University  
-ceng.huang@gmail.com
+Chen Huang — RISE Research Institutes of Sweden
+chen.huang@ri.se
