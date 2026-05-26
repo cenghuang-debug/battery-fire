@@ -4,7 +4,7 @@
 #SBATCH -J b_32
 
 # Set the allocation to be charged for this job
-#SBATCH -A naiss2025-22-1135
+#SBATCH -A <your-naiss-allocation>
 
 # XX hour wall-clock time will be given to this job
 #SBATCH -t 24:00:00
@@ -29,8 +29,8 @@ module load openfoam/v2406
 
 # Change OpenFoam user directory to the project directory
 # Comment the three lines below if not running on the project directory
-# stand in the project dir, like naiss2024-5-347
-cd ~/naiss2024-5-347/
+# stand in the project dir, like your-naiss-project-dir
+cd ~/your-naiss-project-dir/
 WM_PROJECT_DIRECTORY2=$(pwd)
 export WM_PROJECT_USER_DIR=$WM_PROJECT_DIRECTORY2/$WM_PROJECT/$USER-$WM_PROJECT_VERSION
 export FOAM_RUN=$WM_PROJECT_USER_DIR/run
