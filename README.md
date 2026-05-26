@@ -1,5 +1,7 @@
 # Battery Fire Simulation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20392473.svg)](https://doi.org/10.5281/zenodo.20392473)
+
 OpenFOAM case files for the battery fire simulation during thermal runaway reported in:
 
 **A Coupled Thermal Runaway and Fire Dynamics Model for a 100 Ah Cylindrical Lithium-ion Battery Module**  
