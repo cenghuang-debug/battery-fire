@@ -1,4 +1,4 @@
-# COFFEE Battery Fire Simulation — Case 32
+# Battery Fire Simulation
 
 OpenFOAM case files for the battery fire simulation during thermal runaway reported in:
 
