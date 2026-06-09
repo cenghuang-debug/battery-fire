@@ -1,12 +1,13 @@
 # Battery Fire Simulation
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20392473.svg)](https://doi.org/10.5281/zenodo.20392473)
+[![DOI](https://img.shields.io/badge/DOI-10.1007%2Fs10694--026--01924--0-blue)](https://doi.org/10.1007/s10694-026-01924-0)
 
 OpenFOAM case files for the battery fire simulation during thermal runaway reported in:
 
 **A Coupled Thermal Runaway and Fire Dynamics Model for a 100 Ah Cylindrical Lithium-ion Battery Module**  
 Chen Huang, Henrik Wretman, Petra Andersson  
-*Fire Technology* — accepted for publication
+*Fire Technology* (2026) — https://doi.org/10.1007/s10694-026-01924-0
 
 This is the final validated case (case 32) corresponding to the published results.
 
@@ -75,7 +76,7 @@ On a SLURM cluster, adapt and submit `sbatch_OF_dardel_test`.
 
 ## License
 
-The case files are released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) licence. Please cite the paper above if you use this case.
+The case files are released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) licence. If you use this case, please cite the paper above (https://doi.org/10.1007/s10694-026-01924-0) and the dataset (https://doi.org/10.5281/zenodo.20392473).
 
 ## Contact
 
