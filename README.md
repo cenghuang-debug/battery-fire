@@ -7,7 +7,7 @@ OpenFOAM case files for the battery fire simulation during thermal runaway repor
 
 **A Coupled Thermal Runaway and Fire Dynamics Model for a 100 Ah Cylindrical Lithium-ion Battery Module**  
 Chen Huang, Henrik Wretman, Petra Andersson  
-*Fire Technology* (2026) — https://doi.org/10.1007/s10694-026-01924-0
+*Fire Technology* **62**, 92 (2026) — https://doi.org/10.1007/s10694-026-01924-0
 
 This is the final validated case (case 32) corresponding to the published results.
 
